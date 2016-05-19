@@ -1,0 +1,22 @@
+<ion-view view-title="Profissão">
+  <ion-content ng-controller="profissao">
+    <div class="list" >
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Titulo</span>
+            <input type="text" ng-model="tituloProf" placeholder="Titulo">
+          </label>
+        </div>
+        <button ng-click="insertProf()" class="button button-full button-positive">
+          ADICIONAR
+        </button>
+
+        <div class="row header">
+          <div class="col">ID</div>
+          <div class="col">TITULO</div>
+        </div>
+        <div class="row" ng-repeat="prf in profList">
+          <div class="col">{{prf.idprofissao}}</div>
+          <div class="col">{{prf.titulo}}</div>
+        </div>
+  </ion-content>
+</ion-view>

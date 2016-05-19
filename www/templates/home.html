@@ -1,0 +1,39 @@
+<ion-view view-title="Home - Pessoas">
+  <ion-content ng-controller="pessoa">
+  <br>
+     <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Nome</span>
+            <input type="text" ng-model="nome" placeholder="Nome">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Idade</span>
+            <input type="number" ng-model="idade" placeholder="Idade">
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Profissão
+            </div>
+            <select ng-model="idProf">
+              <option ng-repeat="prf in profList" value="{{prf.idprofissao}}">{{prf.titulo}}</option>
+            </select>
+          </label>
+        </div>
+        <button ng-click="insertPessoa()" class="button button-full button-positive">
+          ADICIONAR
+        </button>
+
+         <div class="row header">
+          <div class="col">ID</div>
+          <div class="col">Nome</div>
+          <div class="col">Idade</div>
+          <div class="col">Profissão</div>
+        </div>
+        <div class="row" ng-repeat="pessoa in pessoaList">
+          <div class="col">{{pessoa.idpessoa}}</div>
+          <div class="col">{{pessoa.nome}}</div>
+          <div class="col">{{pessoa.idade}}</div>
+          <div class="col">{{pessoa.titulo}}</div>
+        </div
+  </ion-content>
+</ion-view>
